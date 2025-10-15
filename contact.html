@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Kano State Corporate Security Training Institute (KSCSTI)</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- ===== Header / Navigation ===== -->
+  <header>
+    <div class="container nav">
+      <div class="logo">KSCSTI</div>
+      <button id="menu-toggle" class="menu-toggle">☰</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Contact Section ===== -->
+  <main>
+    <section class="section bg-light reveal">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="text-center">
+          Have a question or need more information? We’d love to hear from you.  
+          Fill out the form below, and our team will respond promptly.
+        </p>
+
+        <div class="grid contact-grid">
+          <!-- Contact Form -->
+          <div class="card">
+            <h3>Send Us a Message</h3>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn full">Send Message</button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="card">
+            <h3>Our Contact Information</h3>
+            <ul class="contact-info">
+              <li><strong>Address:</strong> KACSI Campus, Gabasawa, Kano State, Nigeria</li>
+              <li><strong>Email:</strong> info@kacsi.ng</li>
+              <li><strong>Phone:</strong> +234 802 345 6789</li>
+              <li><strong>Office Hours:</strong> Mon–Fri, 8:00 AM – 5:00 PM</li>
+            </ul>
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps?q=Gabasawa,+Kano+State,+Nigeria&output=embed" 
+                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Photo / Gallery Section ===== -->
+    <section class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Our Campus in Pictures</h2>
+        <div class="gallery-grid">
+          <img src="images/contact1.jpg" alt="KACSI Reception">
+          <img src="images/contact2.jpg" alt="Training Facility">
+          <img src="images/contact3.jpg" alt="Administrative Building">
+          <img src="images/contact4.jpg" alt="Security Drill">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container text-center">
+      © 2025 Kano State Corporate Security Training Institute — All Rights Reserved
+    </div>
+  </footer>
+
+  <<script src="js/script.js"></script>
+
+</body>
+</html>

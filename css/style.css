@@ -1,0 +1,135 @@
+/* =======================================
+   KACSI Unified CSS — clean, responsive
+   Matches the working Contact page style
+======================================= */
+
+/* Reset & base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  color: #222;
+  background: #f7f7f8;
+  display: flex;
+  flex-direction: column;   /* makes footer pushable */
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+/* Page layout */
+header { width: 100%; background: #001f3f; color: #fff; position: sticky; top: 0; z-index: 999; }
+main { flex: 1; }            /* main grows to push footer */
+footer { background: #001f3f; color: #fff; padding: 18px 0; text-align: center; margin-top: auto; }
+
+/* Container */
+.container { width: 92%; max-width: 1200px; margin: 0 auto; }
+
+/* Header / nav */
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+.logo { font-weight: 700; font-size: 1.35rem; letter-spacing: 1px; color: #fff; }
+.menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.6rem; cursor: pointer; }
+
+/* navigation links */
+nav ul { list-style: none; display: flex; gap: 18px; align-items: center; }
+nav a { color: #fff; text-decoration: none; font-weight: 600; padding: 6px 10px; border-radius: 6px; transition: all .18s ease; }
+nav a:hover, nav a.active { background: #ffcc00; color: #001f3f; }
+
+/* Hero (background image) */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 68vh;
+  background: url('../images/hero.jpg') center/cover no-repeat;
+  position: relative;
+  padding: 60px 0;
+}
+.hero .overlay {
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  padding: 28px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 980px;
+}
+.hero h1 { font-size: 2rem; margin-bottom: 10px; }
+.hero p { font-size: 1.05rem; margin-bottom: 18px; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #ffcc00;
+  color: #001f3f;
+  border-radius: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .14s ease, background .14s ease;
+}
+.btn:hover { transform: translateY(-3px); }
+.btn-alt {
+  background: transparent;
+  color: #ffcc00;
+  border: 2px solid #ffcc00;
+  padding: 8px 16px;
+}
+
+/* Sections */
+.section { padding: 56px 0; }
+.section.bg-light { background: #fff; }
+.section .title { text-align: center; color: #001f3f; font-size: 1.6rem; margin-bottom: 20px; font-weight: 700; }
+
+/* Grid and cards */
+.grid { display: grid; gap: 18px; }
+.grid.cols-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.card { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+.card h3 { color: #001f3f; margin-bottom: 8px; }
+
+/* Gallery */
+.gallery-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.gallery-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform .25s ease; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+.gallery-grid img:hover { transform: scale(1.03); }
+
+/* Message box (we removed commandant from home/about) - kept style for cards */
+.message-box { display: flex; gap: 18px; align-items: center; justify-content: center; flex-wrap: wrap; }
+.message-text { max-width: 760px; }
+
+/* Forms */
+form { display: flex; flex-direction: column; gap: 12px; max-width: 680px; margin: 0 auto; }
+input, textarea, select { padding: 10px 12px; border-radius: 8px; border: 1px solid #ddd; font-size: 1rem; }
+textarea { min-height: 120px; resize: vertical; }
+input:focus, textarea:focus, select:focus { outline: none; border-color: #001f3f; box-shadow: 0 0 0 4px rgba(0,31,63,0.06); }
+
+/* Utilities */
+.text-center { text-align: center; }
+.mb-8 { margin-bottom: 8px; }
+
+/* Modal (kept in case you use it on other pages) */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 1200; padding: 20px; }
+.modal-overlay.is-visible { display: flex; }
+.modal { background: #fff; border-radius: 10px; padding: 18px; max-width: 780px; width: 100%; box-shadow: 0 20px 50px rgba(0,0,0,0.3); position: relative; }
+.modal-close { position: absolute; right: 12px; top: 8px; background: transparent; border: 0; font-size: 1.6rem; cursor: pointer; }
+
+/* Reveal helper */
+.reveal { opacity: 0; transform: translateY(18px); transition: all .6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* Footer */
+footer p { margin: 0; font-size: 0.95rem; }
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .hero { min-height: 55vh; padding: 40px 0; }
+  .gallery-grid img { height: 160px; }
+  .message-box { gap: 12px; }
+}
+@media (max-width: 720px) {
+  .menu-toggle { display: block; }
+  nav ul { display: none; position: absolute; right: 12px; top: 64px; background: #001f3f; padding: 12px; gap: 8px; border-radius: 8px; flex-direction: column; min-width: 160px; }
+  nav ul.show { display: flex; }
+  nav a { display: block; padding: 8px 10px; }
+  .hero .overlay { padding: 16px; }
+  .hero h1 { font-size: 1.2rem; }
+}
